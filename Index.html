@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-heading">
+        <hr class="line-left" />
+        <h1>YAY! It's BOGO</h1>
+        <hr class="line-right" />
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="unit-info">
+                    1 Unit <span class="discount-label">10% Off</span>
+                    <div class="price-label">Standard Price</div>
+                </div>
+                <div class="card-price">
+                    <span class="current-price">$10.00 USD</span>
+                    <del class="original-price">$24.00 USD</del>
+                </div>
+            </div>
+            <div class="card-options">
+                <div class="row">
+                    <label>#1</label>
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label>#2</label>
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="badge">MOST POPULAR</div>
+            <div class="card-content">
+                <div class="unit-info">
+                    2 Unit <span class="discount-label">20% Off</span>
+                </div>
+                <div class="card-price">
+                    <span class="current-price">$18.00 USD</span>
+                    <del class="original-price">$24.00 USD</del>
+                </div>                
+            </div>
+            <div class="card-options">
+                <div class="row">
+                    <label>#1</label>
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label>#2</label>
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="unit-info">
+                    3 Unit <span class="discount-label">30% Off</span>
+                </div>
+                <div class="card-price">
+                    <span class="current-price">$24.00 USD</span>
+                    <del class="original-price">$24.00 USD</del>
+                </div>                
+            </div>
+            <div class="card-options">
+                <div class="row">
+                    <label>#1</label>
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label>#2</label>
+                    <select>
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select>
+                        <option>Colour</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <span style="color: #ff6584;">Free Delivery</span>
+            <span style="font-weight: bold;">Total: $18.00 USD</span>
+        </div>
+    </div>
+    <button class="add-to-cart">Add to Cart</button>
+    <p class="brand">
+        @ Powered by Pumper
+    </p>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => c.classList.remove('expanded')); // Collapse all cards
+                card.classList.add('expanded'); // Expand clicked card
+            });
+        });
+    </script>
+</body>
+</html>
